@@ -79,6 +79,30 @@ button:hover {
   animation: fadeIn 1s ease-out forwards;
 }
 
+/* Fade in animation for About section */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Floating animation for tech icons */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Add vibration on hover for tech icons */
+.tech-icon:hover {
+  animation: vibrate 0.3s linear infinite;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

@@ -2,6 +2,7 @@ import './App.css'
 import ParticleBackground from './components/ui/ParticleBackground'
 import Navbar from './components/Navbar'
 import Hero from './components/sections/Hero'
+import About from './components/sections/About'
 import Section from './components/sections/Section'
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
         <Navbar />
         <Section id="home">
           <Hero />
+        </Section>
+        <Section id="about">
+          <About />
         </Section>
       </div>
     </div>
