@@ -24,95 +24,87 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ className, dark
       loaded={particlesLoaded}
       options={{
         fpsLimit: 120,
-        fullScreen: false,
-        interactivity: {
+        fullScreen: false,        interactivity: {
           events: {
             onClick: {
               enable: true,
               mode: "push",
-            },
-            onHover: {
+            },            onHover: {
               enable: true,
               mode: "grab",
               parallax: {
                 enable: true,
-                force: 60,
-                smooth: 10
+                force: 40, 
+                smooth: 14 
               }
             },
             resize: true,
           },
           modes: {
             push: {
-              quantity: 4,
+              quantity: 2, 
             },
             grab: {
-              distance: 140,
+              distance: 125, 
               links: {
-                opacity: 0.5
+                opacity: 0.28 
               }
             },
             repulse: {
-              distance: 100,
-              duration: 0.4,
+              distance: 80, 
+              duration: 0.3, 
             },
           },
-        },
-        particles: {
-          color: {
-            value: darkMode ? "#64ffda" : "#0a192f",
+        },particles: {          color: {
+            value: darkMode ? "rgba(100, 255, 218, 0.45)" : "rgba(10, 25, 47, 0.35)",
           },
           links: {
-            color: darkMode ? "#8892b0" : "#333",
+            color: darkMode ? "rgba(136, 146, 176, 0.25)" : "rgba(51, 51, 51, 0.2)", 
             distance: 150,
             enable: true,
-            opacity: 0.3,
-            width: 1,
+            opacity: 0.25, 
+            width: 0.9, 
             triangles: {
-              enable: true,
-              opacity: 0.05
+              enable: true, 
+              opacity: 0.02
             }
           },
           collisions: {
             enable: true,
-          },
-          move: {
+          },          move: {
             direction: "none",
             enable: true,
             outModes: {
               default: "out",
             },
             random: true,
-            speed: 1.5,
+            speed: 1, 
             straight: false,
             trail: {
-              enable: true,
-              length: 5,
-              fillColor: darkMode ? "#0a192f" : "#ffffff"
+              enable: false, 
             },
-          },
-          number: {
+          },number: {
             density: {
               enable: true,
-              area: 800,
+              area: 1100, 
             },
-            value: 70,
-          },
+            value: 50,
+          },          
           opacity: {
-            value: 0.5,
+            value: 0.4, 
             animation: {
-              speed: 1,
-              minimumValue: 0.1,
+              speed: 0.9, 
+              minimumValue: 0.08, 
             }
           },
           shape: {
-            type: ["circle", "triangle"],
+            type: ["circle"], 
           },
           size: {
-            value: { min: 1, max: 3 },
+            value: { min: 0.8, max: 2.2 }, 
             animation: {
               enable: true,
-              speed: 2,
+              speed: 1.8, 
               minimumValue: 0.1,
             }
           },
