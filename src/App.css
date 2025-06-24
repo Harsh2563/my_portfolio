@@ -49,6 +49,20 @@ button:hover {
   transform: none;
 }
 
+/* Typing cursor animation */
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--tw-colors-secondary, #64ffda);
+  }
+}
+
+.border-r-2 {
+  animation: blink 1s step-end infinite;
+}
+
 /* Custom animations for elements */
 @keyframes fadeIn {
   from {

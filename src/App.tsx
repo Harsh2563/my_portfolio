@@ -1,6 +1,8 @@
 import './App.css'
-import ParticleBackground from './components/ParticleBackground'
+import ParticleBackground from './components/ui/ParticleBackground'
 import Navbar from './components/Navbar'
+import Hero from './components/sections/Hero'
+import Section from './components/sections/Section'
 
 function App() {
   return (
@@ -10,6 +12,9 @@ function App() {
       </div>
       <div className="relative z-10">
         <Navbar />
+        <Section id="home">
+          <Hero />
+        </Section>
       </div>
     </div>
   )
