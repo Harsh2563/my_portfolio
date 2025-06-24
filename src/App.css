@@ -28,6 +28,27 @@ button:hover {
   transform: translateY(-2px);
 }
 
+/* Vibration animation for navbar buttons */
+@keyframes vibrate {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.nav-button:hover {
+  animation: vibrate 0.3s linear infinite;
+  color: var(--tw-colors-secondary, #64ffda);
+}
+
+/* Prevent animation on active item */
+.nav-button.text-secondary:hover {
+  animation: none;
+  transform: none;
+}
+
 /* Custom animations for elements */
 @keyframes fadeIn {
   from {

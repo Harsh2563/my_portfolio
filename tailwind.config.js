@@ -12,6 +12,11 @@ export default {
         textPrimary: "#ccd6f6",
         textSecondary: "#8892b0",
       },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['Roboto Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        display: ['Plus Jakarta Sans', 'sans-serif'],
+      },
     },
   },
   plugins: [],
