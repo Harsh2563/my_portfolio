@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Experience from './components/sections/Experience'
+import Projects from './components/sections/Projects'
 import Section from './components/sections/Section'
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         </Section>
         <Section id="experience">
           <Experience />
+        </Section>
+        <Section id="projects">
+          <Projects />
         </Section>
       </div>
     </div>

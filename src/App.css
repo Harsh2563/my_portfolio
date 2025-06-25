@@ -230,6 +230,102 @@ button:hover {
   animation: card-highlight 2s ease-in-out infinite;
 }
 
+/* Project Cards Animation */
+.project-card {
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.project-card.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7), 0 0 20px rgba(100, 255, 218, 0.15);
+}
+
+/* Image hover effect for project cards */
+.project-card img {
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  filter: grayscale(20%) brightness(0.8);
+}
+
+.project-card:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.07);
+}
+
+/* Image reveal animation for project cards */
+@keyframes reveal {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.project-card.fade-in .img-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tw-colors-secondary, #64ffda);
+  transform-origin: bottom;
+  animation: wipe-reveal 1s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+  animation-delay: calc(var(--index) * 0.1s + 0.2s);
+}
+
+@keyframes wipe-reveal {
+  0% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@keyframes float-project {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.project-card:hover .bg-secondary {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { opacity: 0.1; }
+  50% { opacity: 0.25; }
+  100% { opacity: 0.1; }
+}
+
+/* Flying tech tags animation */
+.project-card:hover span {
+  animation: tag-bounce 0.4s ease forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes tag-bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Project card background pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(100, 255, 218, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 255, 218, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .bg-grid-pattern {
+  opacity: 0.1;
+}
+
 /* Fix for specific timeline overlap issues on desktop */
 @media (min-width: 768px) {
   .exp-animate {
