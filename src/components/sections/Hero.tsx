@@ -1,17 +1,8 @@
 import { useEffect, useRef } from 'react';
 import Typewriter from '../ui/Typewriter';
+import { professions } from '../../constants/professions';
 
 const Hero = () => {
-  const professions = [
-    "Web Developer",
-    "DSA Enthusiast",
-    "Software Engineer",
-    "Tech Enthusiast",
-    "Problem Solver",
-    "Anime Lover",
-    "Football Fan"
-  ];
-
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -58,7 +49,7 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Right side - Image (hidden on mobile) */}
+          {/* Right side - Image */}
           <div className="w-full lg:w-1/2 hidden md:block">
             <div className="relative group">
               <div className="absolute -inset-1 bg-secondary opacity-20 rounded-lg blur-sm group-hover:opacity-30 transition-opacity duration-300"></div>
