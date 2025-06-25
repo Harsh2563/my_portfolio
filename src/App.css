@@ -384,3 +384,92 @@ button:hover {
     margin-top: 2rem;
   }
 }
+
+/* Anime card styling */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Anime card hover effects */
+.anime-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(100, 255, 218, 0.2);
+}
+
+/* Anime card image hover effect */
+.anime-card-image {
+  transition: transform 0.5s ease;
+}
+
+.anime-card:hover .anime-card-image {
+  transform: scale(1.05);
+}
+
+/* Anime infinite scroll animation */
+.anime-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  white-space: nowrap;
+}
+
+.anime-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 60s linear infinite; 
+}
+
+.anime-scroll.primary {
+  animation: scroll 60s linear infinite;
+}
+
+.anime-item {
+  display: inline-block;
+  width: 180px;
+  margin: 0 15px;
+  vertical-align: top;
+  white-space: normal;
+  transition: transform 0.3s ease;
+}
+
+.anime-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.anime-item:hover {
+  transform: translateY(-8px);
+  z-index: 5;
+}
+
+.anime-item:hover img {
+  border-color: var(--tw-colors-secondary, #64ffda);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.anime-item:hover {
+  opacity: 1;
+  z-index: 10;
+  position: relative;
+}

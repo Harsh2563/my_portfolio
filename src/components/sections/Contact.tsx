@@ -27,7 +27,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div ref={contactRef} className="py-16 relative">
+    <div ref={contactRef} className="relative -mt-24"> 
       <div className="container mx-auto px-4">
         {/* Contact Section Title */}
         <div className="contact-animate opacity-0 transition-all duration-700 transform translate-y-10 mb-16">

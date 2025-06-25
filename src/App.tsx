@@ -5,6 +5,7 @@ import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Experience from './components/sections/Experience'
 import Projects from './components/sections/Projects'
+import AnimeRecommendations from './components/sections/AnimeRecommendations'
 import Contact from './components/sections/Contact'
 import SocialLinks from './components/ui/SocialLinks'
 import Section from './components/sections/Section'
@@ -30,6 +31,7 @@ function App() {
         <Section id="projects">
           <Projects />
         </Section>
+        <AnimeRecommendations />
         <Section id="contact">
           <Contact />
         </Section>
