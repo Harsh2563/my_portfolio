@@ -40,12 +40,19 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <button className="px-6 py-3 rounded border-2 border-secondary text-secondary hover:bg-secondary hover:bg-opacity-10 transition-all">
-                View My Work
-              </button>
-              <button className="px-6 py-3 rounded bg-secondary bg-opacity-10 text-secondary border-2 border-secondary hover:bg-opacity-20 transition-all">
-                Contact Me
-              </button>
+              <a 
+                href="https://drive.google.com/file/d/1lpy5YGmFT3gIw_MxVR1KYkJzo_XjM6PJ/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-6 py-3 rounded border-2 border-secondary text-secondary hover:bg-secondary hover:bg-opacity-10 transition-all flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" />
+                  <path d="M8 11h4a1 1 0 110 2H8a1 1 0 110-2z" />
+                  <path d="M8 7h2a1 1 0 110 2H8a1 1 0 110-2z" />
+                </svg>
+                View Resume
+              </a>
             </div>
           </div>
           
