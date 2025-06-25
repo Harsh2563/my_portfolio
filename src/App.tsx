@@ -5,6 +5,8 @@ import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Experience from './components/sections/Experience'
 import Projects from './components/sections/Projects'
+import Contact from './components/sections/Contact'
+import SocialLinks from './components/ui/SocialLinks'
 import Section from './components/sections/Section'
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
       </div>
       <div className="relative z-10">
         <Navbar />
+        <SocialLinks />
         <Section id="home">
           <Hero />
         </Section>
@@ -26,6 +29,9 @@ function App() {
         </Section>
         <Section id="projects">
           <Projects />
+        </Section>
+        <Section id="contact">
+          <Contact />
         </Section>
       </div>
     </div>
