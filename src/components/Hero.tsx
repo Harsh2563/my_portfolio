@@ -1,17 +1,8 @@
 import { useEffect, useRef } from 'react';
 import Typewriter from './ui/Typewriter';
+import { professions } from '../constants/professions';
 
 const Hero = () => {
-  const professions = [
-    "Web Developer",
-    "DSA Enthusiast",
-    "Software Engineer",
-    "Tech Enthusiast",
-    "Problem Solver",
-    "Anime Lover",
-    "Football Fan"
-  ];
-
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

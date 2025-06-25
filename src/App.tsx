@@ -3,6 +3,7 @@ import ParticleBackground from './components/ui/ParticleBackground'
 import Navbar from './components/Navbar'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
+import Experience from './components/sections/Experience'
 import Section from './components/sections/Section'
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
         </Section>
         <Section id="about">
           <About />
+        </Section>
+        <Section id="experience">
+          <Experience />
         </Section>
       </div>
     </div>
